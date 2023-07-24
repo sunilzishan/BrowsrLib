@@ -20,4 +20,7 @@ struct Organization: Codable {
     let publicMembersUrl: String
     let avatarUrl: String
     let description: String
+    
+    // Additional property for avatar picture URL
+    let avatarPictureURL: URL?
 }

@@ -9,6 +9,11 @@
 import Foundation
 
 class BrowsrClient {
+    private let imageDownloader: ImageDownloader
+    
+    init(imageDownloader: ImageDownloader = ImageDownloader()) {
+        self.imageDownloader = imageDownloader
+    }
     
     func fetchOrganizations(completion: @escaping ([Organization]?, BrowsrError?) -> Void) {
         let endpoint = "https://api.github.com/organizations"
@@ -38,5 +43,20 @@ class BrowsrClient {
         }
         
         task.resume()
+    }
+    
+    func fetchAndStoreAvatarPicture(for organization: Organization, completion: @escaping (Data?, Error?) -> Void) {
+        guard let avatarURL = organization.avatarPictureURL else {
+            completion(nil, BrowsrError.invalidURL)
+            return
+        }
+        
+        imageDownloader.downloadImage(from: avatarURL) { (data, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(data, nil)
+            }
+        }
     }
 }
