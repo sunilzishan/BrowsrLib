@@ -7,9 +7,10 @@
 
 import Foundation
 
-enum BrowsrError: Error {
+public enum BrowsrError: Error {
     case invalidURL
     case invalidData
     case networkError(Error)
     case decodingError(Error)
 }
+

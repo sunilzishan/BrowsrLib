@@ -7,22 +7,20 @@
 
 import Foundation
 
-struct Organization: Codable {
-    let login: String
-    let id: Int
-    let nodeId: String?
-    let url: String
-    let reposUrl: String?
-    let eventsUrl: String?
-    let hooksUrl: String?
-    let issuesUrl: String?
-    let membersUrl: String?
-    let publicMembersUrl: String?
-    let avatarUrl: String?
-    let description: String?
-    
-    // Additional property for avatar picture URL
-    let avatarPictureURL: URL?
+public struct Organization: Codable {
+    public let login: String
+    public let id: Int
+    public let nodeId: String?
+    public let url: String
+    public let reposUrl: String?
+    public let eventsUrl: String?
+    public let hooksUrl: String?
+    public let issuesUrl: String?
+    public let membersUrl: String?
+    public let publicMembersUrl: String?
+    public let avatarUrl: String?
+    public let description: String?
+    public let avatarPictureURL: URL?
     
     // Coding keys to handle snake case JSON keys
     private enum CodingKeys: String, CodingKey {
@@ -40,7 +38,7 @@ struct Organization: Codable {
     // Custom initializer to handle avatarPictureURL decoding and any decoding errors.
     /// - Parameter decoder: The decoder to read data from.
     /// - Throws: Decoding errors of type `BrowsrError.decodingError(Error)`.
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         // Regular properties
@@ -64,4 +62,22 @@ struct Organization: Codable {
             self.avatarPictureURL = nil
         }
     }
+    
+    
+    public init(login: String, id: Int, nodeId: String?, url: String, reposUrl: String?, eventsUrl: String?, hooksUrl: String?, issuesUrl: String?, membersUrl: String?, publicMembersUrl: String?, avatarUrl: String?, description: String?, avatarPictureURL: URL?) {
+        self.login = login
+        self.id = id
+        self.nodeId = nodeId
+        self.url = url
+        self.reposUrl = reposUrl
+        self.eventsUrl = eventsUrl
+        self.hooksUrl = hooksUrl
+        self.issuesUrl = issuesUrl
+        self.membersUrl = membersUrl
+        self.publicMembersUrl = publicMembersUrl
+        self.avatarUrl = avatarUrl
+        self.description = description
+        self.avatarPictureURL = avatarPictureURL
+    }
 }
+

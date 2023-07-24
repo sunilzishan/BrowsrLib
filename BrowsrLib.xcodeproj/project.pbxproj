@@ -15,6 +15,9 @@
 		2B3A9C8F2A6EA79D003CFE24 /* BrowsrError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9C8E2A6EA79D003CFE24 /* BrowsrError.swift */; };
 		2B3A9C912A6EA7BD003CFE24 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9C902A6EA7BD003CFE24 /* Organization.swift */; };
 		2B3A9C932A6EBEE5003CFE24 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9C922A6EBEE5003CFE24 /* ImageDownloader.swift */; };
+		2B3A9CF62A6ED6F0003CFE24 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9CF52A6ED6F0003CFE24 /* URLSessionProtocol.swift */; };
+		2B3A9CF82A6ED786003CFE24 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9CF72A6ED786003CFE24 /* CacheManager.swift */; };
+		2B3A9CFA2A6ED7A9003CFE24 /* BrowsrLibURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9CF92A6ED7A9003CFE24 /* BrowsrLibURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 		2B3A9C8E2A6EA79D003CFE24 /* BrowsrError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrError.swift; sourceTree = "<group>"; };
 		2B3A9C902A6EA7BD003CFE24 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		2B3A9C922A6EBEE5003CFE24 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		2B3A9CF52A6ED6F0003CFE24 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		2B3A9CF72A6ED786003CFE24 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		2B3A9CF92A6ED7A9003CFE24 /* BrowsrLibURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrLibURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +87,12 @@
 			children = (
 				2B3A9C752A6EA6E5003CFE24 /* BrowsrLib.h */,
 				2B3A9C8C2A6EA74D003CFE24 /* BrowsrClient.swift */,
+				2B3A9CF52A6ED6F0003CFE24 /* URLSessionProtocol.swift */,
 				2B3A9C902A6EA7BD003CFE24 /* Organization.swift */,
+				2B3A9CF92A6ED7A9003CFE24 /* BrowsrLibURLSession.swift */,
 				2B3A9C922A6EBEE5003CFE24 /* ImageDownloader.swift */,
 				2B3A9C8E2A6EA79D003CFE24 /* BrowsrError.swift */,
+				2B3A9CF72A6ED786003CFE24 /* CacheManager.swift */,
 				2B3A9C762A6EA6E5003CFE24 /* BrowsrLib.docc */,
 			);
 			path = BrowsrLib;
@@ -206,11 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3A9CF62A6ED6F0003CFE24 /* URLSessionProtocol.swift in Sources */,
+				2B3A9CFA2A6ED7A9003CFE24 /* BrowsrLibURLSession.swift in Sources */,
 				2B3A9C8F2A6EA79D003CFE24 /* BrowsrError.swift in Sources */,
 				2B3A9C932A6EBEE5003CFE24 /* ImageDownloader.swift in Sources */,
 				2B3A9C772A6EA6E5003CFE24 /* BrowsrLib.docc in Sources */,
 				2B3A9C912A6EA7BD003CFE24 /* Organization.swift in Sources */,
 				2B3A9C8D2A6EA74D003CFE24 /* BrowsrClient.swift in Sources */,
+				2B3A9CF82A6ED786003CFE24 /* CacheManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
