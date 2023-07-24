@@ -11,6 +11,9 @@
 		2B3A9C7D2A6EA6E5003CFE24 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3A9C722A6EA6E5003CFE24 /* BrowsrLib.framework */; };
 		2B3A9C822A6EA6E5003CFE24 /* BrowsrLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9C812A6EA6E5003CFE24 /* BrowsrLibTests.swift */; };
 		2B3A9C832A6EA6E5003CFE24 /* BrowsrLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B3A9C752A6EA6E5003CFE24 /* BrowsrLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B3A9C8D2A6EA74D003CFE24 /* BrowsrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9C8C2A6EA74D003CFE24 /* BrowsrClient.swift */; };
+		2B3A9C8F2A6EA79D003CFE24 /* BrowsrError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9C8E2A6EA79D003CFE24 /* BrowsrError.swift */; };
+		2B3A9C912A6EA7BD003CFE24 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A9C902A6EA7BD003CFE24 /* Organization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		2B3A9C762A6EA6E5003CFE24 /* BrowsrLib.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = BrowsrLib.docc; sourceTree = "<group>"; };
 		2B3A9C7C2A6EA6E5003CFE24 /* BrowsrLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3A9C812A6EA6E5003CFE24 /* BrowsrLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrLibTests.swift; sourceTree = "<group>"; };
+		2B3A9C8C2A6EA74D003CFE24 /* BrowsrClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrClient.swift; sourceTree = "<group>"; };
+		2B3A9C8E2A6EA79D003CFE24 /* BrowsrError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrError.swift; sourceTree = "<group>"; };
+		2B3A9C902A6EA7BD003CFE24 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				2B3A9C752A6EA6E5003CFE24 /* BrowsrLib.h */,
+				2B3A9C8C2A6EA74D003CFE24 /* BrowsrClient.swift */,
+				2B3A9C902A6EA7BD003CFE24 /* Organization.swift */,
+				2B3A9C8E2A6EA79D003CFE24 /* BrowsrError.swift */,
 				2B3A9C762A6EA6E5003CFE24 /* BrowsrLib.docc */,
 			);
 			path = BrowsrLib;
@@ -194,7 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3A9C8F2A6EA79D003CFE24 /* BrowsrError.swift in Sources */,
 				2B3A9C772A6EA6E5003CFE24 /* BrowsrLib.docc in Sources */,
+				2B3A9C912A6EA7BD003CFE24 /* Organization.swift in Sources */,
+				2B3A9C8D2A6EA74D003CFE24 /* BrowsrClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +352,7 @@
 		2B3A9C872A6EA6E5003CFE24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -370,6 +383,7 @@
 		2B3A9C882A6EA6E5003CFE24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -400,6 +414,7 @@
 		2B3A9C8A2A6EA6E5003CFE24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -415,6 +430,7 @@
 		2B3A9C8B2A6EA6E5003CFE24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
